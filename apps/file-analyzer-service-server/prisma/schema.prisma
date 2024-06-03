@@ -6,15 +6,3 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
-
-model File {
-  createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
-  updatedAt DateTime @updatedAt
-}
-
-model AnalysisResult {
-  createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
-  updatedAt DateTime @updatedAt
-}

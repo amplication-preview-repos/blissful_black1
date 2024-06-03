@@ -5,14 +5,6 @@ import { theme } from "./theme/theme";
 import Login from "./Login";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard";
-import { FileList } from "./file/FileList";
-import { FileCreate } from "./file/FileCreate";
-import { FileEdit } from "./file/FileEdit";
-import { FileShow } from "./file/FileShow";
-import { AnalysisResultList } from "./analysisResult/AnalysisResultList";
-import { AnalysisResultCreate } from "./analysisResult/AnalysisResultCreate";
-import { AnalysisResultEdit } from "./analysisResult/AnalysisResultEdit";
-import { AnalysisResultShow } from "./analysisResult/AnalysisResultShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -38,22 +30,7 @@ const App = (): React.ReactElement => {
         theme={theme}
         dashboard={Dashboard}
         loginPage={Login}
-      >
-        <Resource
-          name="File"
-          list={FileList}
-          edit={FileEdit}
-          create={FileCreate}
-          show={FileShow}
-        />
-        <Resource
-          name="AnalysisResult"
-          list={AnalysisResultList}
-          edit={AnalysisResultEdit}
-          create={AnalysisResultCreate}
-          show={AnalysisResultShow}
-        />
-      </Admin>
+      ></Admin>
     </div>
   );
 };
